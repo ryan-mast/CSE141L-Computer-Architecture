@@ -1,0 +1,10 @@
+import os
+print("Cleaning...")
+os.system("make clean")
+print("Building...")
+os.system("make")
+print("Assembling bitcount.s")
+os.system("java work bitcount.s bitcount")
+print("Assembling bubblesort.s")
+os.system("java work bubblesort.s bubblesort")
+print("Done")

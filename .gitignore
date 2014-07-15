@@ -1,0 +1,8 @@
+*.class
+*.zip
+
+.metadata/
+.svn/
+
+.classpath
+.project

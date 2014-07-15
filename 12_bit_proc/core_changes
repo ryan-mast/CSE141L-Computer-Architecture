@@ -1,0 +1,50 @@
+	int ExecutionCycles = 0;
+	int DynamicIC = 0;
+	int prevFetch = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if ((debug_o.substate_r != sHalt) &&
+				((debug_o.substate_r == sFetch) || (debug_o.substate_r == sInitialize)))
+				begin
+					if (prevFetch == 0)
+						begin
+							prevFetch = 1;
+							DynamicIC++;
+						end
+				end
+			else
+				begin
+					prevFetch = 0;
+				end
+				
+			if ((reset_i != 1) && (debug_o.substate_r != sHalt))
+				begin
+					ExecutionCycles++;
+				end
+			else
+				begin
+					ExecutionCycles = 0;
+					DynamicIC = 0;
+				end
+			
+			$display("IC: %d, CYC: %d\n", DynamicIC, ExecutionCycles); // count instructions
