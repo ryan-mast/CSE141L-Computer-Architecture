@@ -1,5 +1,5 @@
 # CSE141L-Computer-Architecture
-Assembler and Verilog processor implementation for a custom ISA designed for the CSE 141L course at UC San Diego
+Assembler, simulator, and Verilog processor implementation for a custom ISA designed for the CSE 141L course at UC San Diego
 
 Below is an overview of the files contained in each directory.
 * 12_bit_proc: The verilog implementation of a processor for our ISA design
